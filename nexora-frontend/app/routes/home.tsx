@@ -39,8 +39,8 @@ const Home = () => {
       <div className="container mx-auto px-6 text-center">
         {/* Title */}
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-          We remove your {" "}
-          <span className="bg-accent px-2 py-1 border-2 border-black inline-block">
+          We remove{" "}
+          <span className="bg-accent px-2 py-1 border-2 border-black inline-block -rotate-2">
             PIIs
           </span>{" "}
           from your documents.
@@ -65,7 +65,7 @@ const Home = () => {
           {features.map((feature) => (
             <div
               key={feature.label}
-              className="relative bg-[#FF9A9E] border-2 border-black shadow-[4px_4px_0px_#000] p-6"
+              className="relative bg-[#FF9A9E] border-2 border-black shadow-[4px_4px_0px_#000] p-6 "
             >
               {/* Top-left icon */}
               <feature.decor className={feature.decorClassName1} />
