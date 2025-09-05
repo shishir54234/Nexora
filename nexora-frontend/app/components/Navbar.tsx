@@ -20,13 +20,12 @@ const Navbar = () => {
               <div className="w-10 h-10 bg-blue-400 border-3 border-blue-950 rotate-45 flex items-center justify-center">
                 <Shield className="w-5 h-5 text-blue-950 -rotate-45" />
               </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-300 border-2 border-blue-950"></div>
+              {/* <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-300 border-2 border-blue-950"></div> */}
             </div>
             <div className="relative">
               <span className="text-2xl font-black text-blue-100 uppercase tracking-wider">
                 NEXORA
               </span>
-              <div className="absolute -bottom-1 left-0 w-full h-1 bg-blue-400"></div>
             </div>
           </div>
 
