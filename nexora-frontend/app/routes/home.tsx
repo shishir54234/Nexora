@@ -2,6 +2,8 @@ import type { Route } from "./+types/home";
 import { Shield, Scan, Lock, Database, Zap } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import Marquee from "~/components/ui/marquee";
+import StarBurst from "./icons/star_burst_icon";
+
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,10 +14,18 @@ export function meta({}: Route.MetaArgs) {
 
 const Home = () => {
   const features = [
-    { icon: Scan, label: "OCR PROCESSING" },
-    { icon: Lock, label: "PII DETECTION" },
-    { icon: Shield, label: "SMART REDACTION" },
-    { icon: Database, label: "SECURE STORAGE" },
+    { icon: Scan, label: "OCR PROCESSING" , decor:  StarBurst, 
+    decorClassName1:"absolute top-2 left-2 w-8 h-8 text-black opacity-70", 
+    decorClassName2:"absolute bottom-2 right-2 w-8 h-8 text-black opacity-70"},
+    { icon: Lock, label: "PII DETECTION" , decor:  StarBurst, 
+    decorClassName1:"absolute bottom-2 left-2 w-8 h-8 text-black opacity-70", 
+    decorClassName2:"absolute top-2 right-2 w-8 h-8 text-black opacity-70"},
+    { icon: Shield, label: "SMART REDACTION" , decor:  StarBurst, 
+    decorClassName1:"absolute top-2 left-2 w-8 h-8 text-black opacity-70", 
+    decorClassName2:"absolute bottom-2 right-2 w-8 h-8 text-black opacity-70"},
+    { icon: Database, label: "SECURE STORAGE" , decor:  StarBurst, 
+    decorClassName1:"absolute bottom-2 left-2 w-8 h-8 text-black opacity-70", 
+    decorClassName2:"absolute top-2 right-2 w-8 h-8 text-black opacity-70"},
   ];
   const compliances = [
     "ENTERPRISE READY",
@@ -55,15 +65,25 @@ const Home = () => {
           {features.map((feature) => (
             <div
               key={feature.label}
-              className="bg-blue-400 border-2 border-black shadow-[4px_4px_0px_#000] p-6"
+              className="relative bg-[#FF9A9E] border-2 border-black shadow-[4px_4px_0px_#000] p-6"
             >
+              {/* Top-left icon */}
+              <feature.decor className={feature.decorClassName1} />
+
+              {/* Main icon */}
               <feature.icon className="w-8 h-8 text-black mb-3 mx-auto" />
-              <span className="block text-black font-bold text-sm uppercase tracking-wide">
+
+              {/* Label */}
+              <span className="block text-black font-bold text-sm uppercase tracking-wide text-center">
                 {feature.label}
               </span>
+
+              {/* Bottom-right icon */}
+              <feature.decor className={feature.decorClassName2} />
             </div>
           ))}
         </div>
+
 
         {/* Compliance marquee */}
         <Marquee items={compliances} />

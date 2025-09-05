@@ -21,7 +21,7 @@ const Navbar = () => {
               <Shield className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-display font-bold text-foreground">
-              RedactAI
+              NexoraAI
             </span>
           </div>
 

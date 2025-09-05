@@ -1,4 +1,7 @@
 import React from "react";
+import DocumentIcon from "./DocumentIcon";
+
+
 export default function Marquee({ items }: { items: string[]}) {
   return (
     <div className=" relative flex w-full overflow-x-hidden bg-secondary-background text-foreground font-base">
@@ -13,6 +16,7 @@ export default function Marquee({ items }: { items: string[]}) {
               <span className="px-2 py-1  mx-4 text-4xl font-bold italic rounded-lg">
                 {item}
               </span>
+              
             </div>
           )
         })}
@@ -29,6 +33,7 @@ export default function Marquee({ items }: { items: string[]}) {
               <span className="px-2 py-1 mx-4 text-4xl font-bold italic rounded-lg">
                 {item}
               </span>
+             
             </div>
           )
         })}
