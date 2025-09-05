@@ -36,7 +36,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body>
+      <body className="relative min-h-screen flex items-center justify-center brutal-dots">
         <Navbar />
         {children}
         <ScrollRestoration />
@@ -47,7 +47,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="mt-18">
+      <Outlet />
+
+    </div>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {

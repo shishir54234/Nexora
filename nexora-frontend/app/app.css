@@ -389,3 +389,35 @@ body {
     }
   }
 }
+
+.brutal-dots {
+  background-color: #88D8FF;
+  background-image: radial-gradient(#014324 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+
+.brutal-noise {
+  background: #F5F5F5;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  position: relative;
+}
+
+.brutal-noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  opacity: 0.2;
+}
+
+.brutal-stripes {
+  background-color: #FF9A9E;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #A8E6CF,
+    #A8E6CF 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}

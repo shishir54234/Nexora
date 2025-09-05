@@ -8,7 +8,7 @@ const ComparisonViewer = () => {
   const [showRedacted, setShowRedacted] = useState(true);
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-20 px-4 bg-background border-2 border-dashed border-foreground">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-display font-bold mb-4 text-foreground">
