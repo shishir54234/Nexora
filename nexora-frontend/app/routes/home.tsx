@@ -1,6 +1,7 @@
 import type { Route } from "./+types/home";
 import { Shield, Scan, Lock, Database, Zap } from "lucide-react";
 import { Button } from "~/components/ui/button";
+import Marquee from "~/components/ui/marquee";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -16,7 +17,10 @@ const Home = () => {
     { icon: Shield, label: "SMART REDACTION" },
     { icon: Database, label: "SECURE STORAGE" }
   ];
-
+  const compliances = [
+    "ENTERPRISE READY","GDPR COMPLIANT",
+    "SOC2 CERTIFIED","ENTERPRISE READY",
+  ];
   return (
     <section className="relative min-h-screen mt-8 flex items-center justify-center bg-background overflow-hidden scan-lines">
       {/* Brutalist background elements */}
@@ -70,19 +74,21 @@ const Home = () => {
           <div className="terminal bg-foreground text-background p-6 font-mono text-sm">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-accent" />
-                <span>GDPR_COMPLIANT=TRUE</span>
+                
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-accent" />
-                <span>SOC2_CERTIFIED=TRUE</span>
+                
               </div>
               <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-accent" />
-                <span>ENTERPRISE_READY=TRUE</span>
+                
               </div>
             </div>
           </div>
+          <Marquee items={compliances}>
+
+
+          </Marquee>
+
         </div>
       </div>
     </section>
