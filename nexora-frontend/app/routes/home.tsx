@@ -43,7 +43,7 @@ const Home = () => {
           <span className="bg-accent px-2 py-1 border-2 border-black inline-block -rotate-2">
             PIIs
           </span>{" "}
-          from your documents.
+          from your healthcare documents.
         </h1>
 
         <p className="text-lg md:text-xl text-black/80 mb-12 max-w-2xl mx-auto font-mono leading-relaxed">

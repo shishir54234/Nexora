@@ -4,5 +4,5 @@ export default [
     index("routes/home.tsx"),
     route("/upload", "routes/upload.tsx"),
     route("/documents", "routes/documents.tsx"),
-    route("/analytics", "routes/Analytics.tsx"),
+    route("/analytics", "routes/analytics.tsx"),
 ] satisfies RouteConfig;
